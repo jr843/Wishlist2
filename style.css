@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    background-color: #f5f3ef;
+    color: #252525;
+}
+
+.cabecalho {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #080d38;
+    color: white;
+}
+
+.subtitulo {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.cabecalho h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    margin-bottom: 15px;
+}
+
+.cabecalho > p:last-child {
+    color: #fefffd;
+    line-height: 1.6;
+}
+
+.presentes {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.presentes h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.lista-presentes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.cartao {
+    background: rgb(252, 251, 251);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #0000000d;
+    transition: transform 0.2s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+}
+
+.cartao img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #fafafc;
+    padding: 12px;
+}
+
+.informacoes {
+    padding: 20px;
+}
+
+.categoria {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #537b65;
+}
+
+.informacoes h3 {
+    margin: 12px 0;
+    font-size: 21px;
+}
+
+.informacoes p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.informacoes a {
+    display: block;
+    margin-top: 18px;
+    padding: 12px;
+    background: #100699;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.informacoes a:hover {
+    background: #2f2859;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #666;
+}
+
+@media (max-width: 750px) {
+    .lista-presentes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .cartao img {
+        height: 170px;
+    }
+
+    .informacoes {
+        padding: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .lista-presentes {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao img {
+        height: 240px;
+    }
+}
